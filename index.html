@@ -1,247 +1,308 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-</style>
+  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
+  </style>
 </head>
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="images/amanda.jpeg" style="width:100%;" class="w3-round"><br><br>
-    <h4><b>Amanda Rosa F. Jorge</b></h4>
-    <p class="w3-text-grey">27 anos</p>
-    <p class="w3-text-grey">Bacharel em Engenharia Biomédica (UFU) </p>
-    <p class="w3-text-grey">Especialista em Inteligência Artificial e Aprendizado de Máquina (PUC Minas)</p>
-    <p class="w3-text-grey">Aluna de Mestrado Programa de Pós-Graduação (UFU)</p>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-  </div>
-  <div class="w3-panel w3-large">
-    <a href="https://www.instagram.com/amandarosafj/" class="fa fa-instagram w3-hover-opacity"></a>
-    <a href="https://www.linkedin.com/in/amanda-rosa-ferreira-jorge-757378163/" class="fa fa-linkedin w3-hover-opacity"></a>
-  </div>
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="images/amanda.jpeg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey " onclick="w3_open()"><i class="fa fa-bars"></i></span>
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
     <div class="w3-container">
-    <h1><b>Meu Portfólio / My Portfolio (em construção)</b></h1>
-    <div class="w3-container w3-padding-small w3-white">
-      <div class="w3-section w3-padding-8">
-        <p> Seja bem-vindo ao meu website para divulgação do meu trabalho desde produções científicas até desenvolvimento de produtos para empresas.</p>
-        <hr class="w3-border">
-        <p>Welcome to my website to share my work since scientific productions and product development for companies.</p>
-      </div>
+      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+        title="close menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <img src="images/amanda.jpeg" style="width:100%;" class="w3-round"><br><br>
+      <h4><b>Amanda Rosa F. Jorge</b></h4>
+      <p class="w3-text-grey">27 anos</p>
+      <p class="w3-text-grey">Bacharel em Engenharia Biomédica (UFU) </p>
+      <p class="w3-text-grey">Especialista em Inteligência Artificial e Aprendizado de Máquina (PUC Minas)</p>
+      <p class="w3-text-grey">Aluna de Mestrado Programa de Pós-Graduação (UFU)</p>
     </div>
-  </header>
+    <div class="w3-bar-block">
+      <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+          class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+          class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+          class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    </div>
+    <div class="w3-panel w3-large">
+      <a href="https://www.instagram.com/amandarosafj/" class="fa fa-instagram w3-hover-opacity"></a>
+      <a href="https://www.linkedin.com/in/amanda-rosa-ferreira-jorge-757378163/"
+        class="fa fa-linkedin w3-hover-opacity"></a>
+    </div>
+  </nav>
 
-  <hr class="w3-border">
-  
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="images/food.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Rotulação e Detecção de Objetos Personalizada / Personal Object Labeling and Detection</b></p>
-        <p>ESCREVER SOBRE</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="images/retinaface2.jpg" alt="Norway" style="width:90%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Ferramenta Open-Source: RetinaFace / Open Source Tool: RetinaFace</b></p>
-        <p>ESCREVER SOBRE</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="images/Demo_Dlib.gif" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Ferramenta Open-Source: DLib / Open Source Tool: DLib</b></p>
-        <p>ESCREVER SOBRE</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="images/tcc.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Protótipo TCC</b></p>
-        <p>ESCREVER SOBRE</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="images/none.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>VBA</b></p>
-        <p>ESCREVER SOBRE</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="images/none.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>JavaScript</b></p>
-        <p>ESCREVER SOBRE</p>
-      </div>
-    </div>
-  </div>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px">
+
+    <!-- Header -->
+    <header id="portfolio">
+      <a href="#"><img src="images/amanda.jpeg" style="width:65px;"
+          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey " onclick="w3_open()"><i
+          class="fa fa-bars"></i></span>
+      <div class="w3-container">
+        <h1><b>Meu Portfólio / My Portfolio (em construção)</b></h1>
+        <div class="w3-container w3-padding-small w3-white">
+          <div class="w3-section w3-padding-8">
+            <p> Seja bem-vindo ao meu website para divulgação do meu trabalho desde produções científicas até
+              desenvolvimento de produtos para empresas.</p>
+            <hr class="w3-border">
+            <p>Welcome to my website to share my work since scientific productions and product development for
+              companies.</p>
+          </div>
+        </div>
+    </header>
 
     <hr class="w3-border">
 
-   <!-- Images of Me -->
-  <div class="w3-row-padding" id="about">
-    <div class="w3-col m6">
-      <img src="images/amanda2.jpg" alt="Me" style="width:118.2%">
-    </div>
-    <div class="w3-col m6">
-      <img src="images/escritorio.jpeg" alt="Me" style="width:100%">
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom text-bg-light">
+        <img src="images/food.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Rotulação e Detecção de Objetos Personalizada / Personal Object Labeling and Detection</b></p>
+          <p>ESCREVER SOBRE</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="images/retinaface2.jpg" alt="Norway" style="width:90%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Ferramenta Open-Source: RetinaFace / Open Source Tool: RetinaFace</b></p>
+          <p>ESCREVER SOBRE</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="images/Demo_Dlib.gif" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Ferramenta Open-Source: DLib / Open Source Tool: DLib</b></p>
+          <p>ESCREVER SOBRE</p>
+        </div>
+      </div>
     </div>
 
-  </div>
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="images/tcc.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Protótipo TCC</b></p>
+          <p>ESCREVER SOBRE</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="images/none.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>VBA</b></p>
+          <p>ESCREVER SOBRE</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="images/none.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white w3-border-black">
+          <p><b>JavaScript</b></p>
+          <p>ESCREVER SOBRE</p>
+        </div>
+      </div>
+    </div>
 
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>Sobre mim / About Me</b></h4>
-    <p>Formação Bacharel em Engenharia Biomédica. Participou de projetos de iniciação científica orientados na área de Neurociência e Eletroencefalografia e na área de Próteses e Processamento de Sinais Biológicos. Atualmente é aluna de Mestrado em Engenharia Biomédica no Programa de Pós-Graduação na Universidade Federal de Uberlândia. Especialista em Inteligência Artificial e Aprendizado de Máquina pela PUC Minas. Apaixonada por tecnologia procuro sempre estar me atualizando sobre inovações em FRONTEND, BACKEND, Impressões 3D, entre outros.</p>
     <hr class="w3-border">
-    <p>Education Bachelor's Degree in Biomedical Engineering. She participated in scientific initiation projects oriented in the area of Neuroscience and Electroencephalography and in the area of Prostheses and Biological Signal Processing. She is currently a Master's student in Biomedical Engineering in the Graduate Program at the Federal University of Uberlândia. Specialist in Artificial Intelligence and Machine Learning from PUC Minas. Passionate about technology, I always try to update myself on innovations in FRONTEND, BACKEND, 3D Printing, among others.</p>
 
-    <hr class="w3-border-dark-gray">
-    
-    <h4><b>Habilidades / Technical Skills</b></h4>
-    <!-- Progress bars / Skills -->
-    <p>Machine Learning</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-green w3-padding w3-center" style="width:100%">100%</div>
-    </div>
-    <p>Python</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-green w3-padding w3-center" style="width:95%">95%</div>
-    </div>
-    <p>R Language</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-green w3-padding w3-center" style="width:85%">85%</div>
-    </div>
-    <p>MatLab</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-green w3-padding w3-center" style="width:85%">85%</div>
-    </div>
-    <p>APIs</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-light-green w3-padding w3-center" style="width:50%">50%</div>
-    </div>
-    <p>Docker</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-light-green w3-padding w3-center" style="width:50%">50%</div>
-    </div>
-    <p>JavaScript</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-light-green w3-padding w3-center" style="width:50%">50%</div>
-    </div>
-    <p>Cloud</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-blue-gray w3-padding w3-center" style="width:10%">10%</div>
-    </div>
-    <p>
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
-    <hr class="w3-border-dark-gray">
-    
-    <h4><b>Produções Principais / Main Production</b></h4>
-    <!-- Pricing Tables -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <p><a href="https://zenodo.org/record/7492331" >Bessa, P. ; JORGE, A. R. F. ; SOARES, A. B. . Human Facial Emotion Classification: A Method Validation. In: XIV Simpósio de Engenharia Biomédica, 2022, Uberlândia. Anais do XIV Simpósio de Engenharia Biomédica, 2022.</a></p>
-      <p><a href="https://zenodo.org/record/7493085#.ZCBmcnaZPIU" >JORGE, A. R. F.; CUNHA, M. J. ; SOARES, A. B. . Input Parameters Selection for Emotion Recognition using Genetic Algorithm and Machine Learning. In: XIV Simpósio de Engenharia Biomédica, 2022, Uberlândia. Anais do XIV Simpósio de Engenharia Biomédica, 2022.</a></p>
-      <p><a href="https://zenodo.org/record/7493325#.ZCBmnnaZPIU" >GOMES, L. G. D. ; JORGE, A. R. F. ; SOARES, A. B. ; ALMEIDA, M. B. . 3D Printed Assistive Technology among Multiple Control Sites. In: XIV Simpósio de Engenharia Biomédica, 2022, Uberlândia. Anais do XIV Simpósio de Engenharia Biomédica, 2022.</a></p>
-      <p><a href="https://zenodo.org/record/3459730#.ZCBmzHaZPIU" >JORGE, A. R. F.; SOARES, A. B. . Projeto de dispositivo mioelétrico multicanal para controle de próteses virtuais em realidade aumentada. In: XII Simpósio de Engenharia Biomédica, 2019, Uberlândia. Projeto de dispositivo mioelétrico multicanal para controle de próteses virtuais em realidade aumentada, 2019.</a></p>
-      <p><a href="https://www.even3.com.br/anais/cobecseb/78829/" >RAMOS, C.D. ; SAMPAIO, A.J. ; R. F. JORGE, A. ; COSTA, A.C.P.R. ; SILVA, P.C. ; C. OLIVEIRA, C. ; A. DE A. RODRIGUES, A. ; B. DESTRO-FILHO, J. ; A. CARRIJO, G. . ESTUDO DE CASO: CARACTERIZAÇÃO DAS BANDAS GAMA E SUPERGAMA PARA EEG NORMAL EM AMBIENTES DIVERSOS. In: Anais COBECSEB 2017, 2018, Uberlândia. Anais do V Congresso Brasileiro de Eletromiografia e Cinesiologia e X Simpósio de Engenharia Biomédica, 2017.</a></p>
-      
-    </div>
-  </div>
-  
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-white">
-    <h4 id="contact"><b>Entre em contato / Contact Me</b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-brown">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-        <p>amandarosafj@live.com</p>
+    <!-- Images of Me -->
+    <div class="w3-row-padding" id="about">
+      <div class="w3-col m6">
+        <img src="images/amanda2.jpg" alt="Me" style="width:118.2%">
       </div>
-      <div class="w3-third w3-pale-yellow">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-black"></i></p>
-        <p>Uberlândia, MG</p>
+      <div class="w3-col m6">
+        <img src="images/escritorio.jpeg" alt="Me" style="width:100%">
       </div>
-      <div class="w3-third w3-brown">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-        <p>+5534984375741</p>
-      </div>
-    </div>
-    <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-    </form>
-  </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-6 w3-dark-grey ">
-    <div class="w3-container ">
-      <h3>OBRIGADA PELA VISITA! / THANKS FOR YOUR VISIT!</h3>
-      <p>"A vida é feita de etapas. O segredo do crescimento é foco e dedicação em cada etapa, sem se preocupar com as próximas, as próximas só virão se você se dedicar à etapa de hoje."</p>
-      <p>"Life is made of stages. The secret to growth is focus and dedication at each stage, without worrying about the next ones, the next ones will only come if you dedicate yourself to today's stage."</p>
-      <p>Powered by <a href=" http://lattes.cnpq.br/9898720047454931" target="_blank">Amanda Rosa F. Jorge</a></p>
     </div>
 
+    <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+      <h4><b>Sobre mim / About Me</b></h4>
+      <p>
+      <ul>
+        <li>Participou de projetos de iniciação científica orientados na área de Neurociência e Eletroencefalografia e
+          na área de Próteses e Processamento de Sinais Biológicos.</li>
+        <li>2020: Formação Bacharel em Engenharia Biomédica.</li>
+        <li>2022: Especialista em Inteligência Artificial e Aprendizado de Máquina pela PUC Minas.</li>
+        <li>2023: Finalização Mestrado em Engenharia Biomédica no Programa de Pós-Graduação na Universidade Federal de
+          Uberlândia.</li>
+        <li>Apaixonada por tecnologia procuro sempre estar me atualizando sobre inovações em FRONTEND, BACKEND,
+          Impressões 3D, entre outros.</li>
+      </ul>
+      </p>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+      <hr class="w3-border">
+      <p>
+      <ul>
+        <li>She participated in scientific initiation projects oriented in the area of Neuroscience and
+          Electroencephalography and in the area of Prostheses and Biological Signal Processing.</li>
+        <li>2020: Bachelor Degree in Biomedical Engineering.</li>
+        <li>2022: Specialist in Artificial Intelligence and Machine Learning from PUC Minas.</li>
+        <li>2023: Completion of the Master's Degree in Biomedical Engineering in the Graduate Program at the Federal
+          University of Uberlândia.</li>
+        <li>Passionate about technology, I always try to update myself on innovations in FRONTEND, BACKEND, 3D Printing,
+          among others.</li>
+      </ul>
+      </p>
+
+      <hr class="w3-border-dark-gray">
+
+      <h4><b>Habilidades / Technical Skills</b></h4>
+      <!-- Progress bars / Skills -->
+      <p>Machine Learning</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-green w3-padding w3-center" style="width:100%">100%</div>
+      </div>
+      <p>Python</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-green w3-padding w3-center" style="width:95%">95%</div>
+      </div>
+      <p>R Language</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-green w3-padding w3-center" style="width:85%">85%</div>
+      </div>
+      <p>MatLab</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-green w3-padding w3-center" style="width:85%">85%</div>
+      </div>
+      <p>APIs</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-light-green w3-padding w3-center" style="width:50%">50%</div>
+      </div>
+      <p>Docker</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-light-green w3-padding w3-center" style="width:50%">50%</div>
+      </div>
+      <p>JavaScript</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-light-green w3-padding w3-center" style="width:50%">50%</div>
+      </div>
+      <p>Cloud</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-blue-gray w3-padding w3-center" style="width:10%">10%</div>
+      </div>
+      <p>
+      <p>
+        <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+          <i class="fa fa-download w3-margin-right"></i>Download Resume
+        </button>
+      </p>
+      <hr class="w3-border-dark-gray">
+
+      <h4><b>Produções Principais / Main Production</b></h4>
+      <!-- Pricing Tables -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <p><a href="https://zenodo.org/record/7492331">Bessa, P. ; JORGE, A. R. F. ; SOARES, A. B. . Human Facial
+            Emotion Classification: A Method Validation. In: XIV Simpósio de Engenharia Biomédica, 2022, Uberlândia.
+            Anais do XIV Simpósio de Engenharia Biomédica, 2022.</a></p>
+        <p><a href="https://zenodo.org/record/7493085#.ZCBmcnaZPIU">JORGE, A. R. F.; CUNHA, M. J. ; SOARES, A. B. .
+            Input Parameters Selection for Emotion Recognition using Genetic Algorithm and Machine Learning. In: XIV
+            Simpósio de Engenharia Biomédica, 2022, Uberlândia. Anais do XIV Simpósio de Engenharia Biomédica, 2022.</a>
+        </p>
+        <p><a href="https://zenodo.org/record/7493325#.ZCBmnnaZPIU">GOMES, L. G. D. ; JORGE, A. R. F. ; SOARES, A. B. ;
+            ALMEIDA, M. B. . 3D Printed Assistive Technology among Multiple Control Sites. In: XIV Simpósio de
+            Engenharia Biomédica, 2022, Uberlândia. Anais do XIV Simpósio de Engenharia Biomédica, 2022.</a></p>
+        <p><a href="https://zenodo.org/record/3459730#.ZCBmzHaZPIU">JORGE, A. R. F.; SOARES, A. B. . Projeto de
+            dispositivo mioelétrico multicanal para controle de próteses virtuais em realidade aumentada. In: XII
+            Simpósio de Engenharia Biomédica, 2019, Uberlândia. Projeto de dispositivo mioelétrico multicanal para
+            controle de próteses virtuais em realidade aumentada, 2019.</a></p>
+        <p><a href="https://www.even3.com.br/anais/cobecseb/78829/">RAMOS, C.D. ; SAMPAIO, A.J. ; R. F. JORGE, A. ;
+            COSTA, A.C.P.R. ; SILVA, P.C. ; C. OLIVEIRA, C. ; A. DE A. RODRIGUES, A. ; B. DESTRO-FILHO, J. ; A. CARRIJO,
+            G. . ESTUDO DE CASO: CARACTERIZAÇÃO DAS BANDAS GAMA E SUPERGAMA PARA EEG NORMAL EM AMBIENTES DIVERSOS. In:
+            Anais COBECSEB 2017, 2018, Uberlândia. Anais do V Congresso Brasileiro de Eletromiografia e Cinesiologia e X
+            Simpósio de Engenharia Biomédica, 2017.</a></p>
+
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-padding-large w3-white">
+      <h4 id="contact"><b>Entre em contato / Contact Me</b></h4>
+      <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+        <div class="w3-third w3-brown">
+          <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+          <p>amandarosafj@live.com</p>
+        </div>
+        <div class="w3-third w3-pale-yellow">
+          <p><i class="fa fa-map-marker w3-xxlarge w3-text-black"></i></p>
+          <p>Uberlândia, MG</p>
+        </div>
+        <div class="w3-third w3-brown">
+          <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+          <p>+5534984375741</p>
+        </div>
+      </div>
+      <hr class="w3-opacity">
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i
+            class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-6 w3-dark-grey ">
+      <div class="w3-container ">
+        <h3>OBRIGADA PELA VISITA! / THANKS FOR YOUR VISIT!</h3>
+        <p>"A vida é feita de etapas. O segredo do crescimento é foco e dedicação em cada etapa, sem se preocupar com as
+          próximas, as próximas só virão se você se dedicar à etapa de hoje."</p>
+        <p>"Life is made of stages. The secret to growth is focus and dedication at each stage, without worrying about
+          the next ones, the next ones will only come if you dedicate yourself to today's stage."</p>
+        <p>Powered by <a href=" http://lattes.cnpq.br/9898720047454931" target="_blank">Amanda Rosa F. Jorge</a></p>
+      </div>
+
+
+      <script>
+        // Script to open and close sidebar
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+        }
+      </script>
 
 </body>
+
 </html>
