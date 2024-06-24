@@ -136,7 +136,7 @@
 
     <div class="w3-row-padding">
       <div class="w3-content w3-padding-large w3-margin-top">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="images/lmest2.jpeg" alt="First slide" width="800" height="350">
@@ -337,12 +337,11 @@
           document.getElementById("myOverlay").style.display = "none";
         }
 
-        $(document).ready(function() {
+        const myCarousel = document.getElementById('myCarousel')
+
+        myCarousel.addEventListener('slide.bs.carousel', event => {
           
-          $('#carouselExampleSlidesOnly').carousel({
-              interval: 2000  
-          });
-      });
+        });
       </script>
 
       <!-- jQuery -->
@@ -353,8 +352,6 @@
 
       <!-- Bootstrap JavaScript -->
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
 
 </body>
 
