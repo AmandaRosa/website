@@ -119,7 +119,7 @@
         </div>
       </div>
       <div class="w3-third w3-container w3-margin-bottom">
-        <img src="images/none.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <img src="..." alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white w3-border-black">
           <p><b>Análise de Temperatura e Emoções em RGB</b></p>
           <p>Durante o meu Mestrado, o objetivo principal foi desenvolver modelos automatizados e eficientes para captura e <b>classificação de expressões faciais e temperatura corporal</b> em tempo real, utilizando dados de <b>câmeras RGB</b>. Os resultados demonstram acurácias médias acima de 80% para a classificação de emoções faciais e uma variação na temperatura corporal estimada, com erro médio quadrático na faixa de 0,15-0,20 ºC</p>
@@ -337,10 +337,11 @@
           document.getElementById("myOverlay").style.display = "none";
         }
 
-        const myCarousel = document.getElementById('myCarousel')
+        const myCarouselElement = document.querySelector('#myCarousel')
 
-        myCarousel.addEventListener('slide.bs.carousel', event => {
-          
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+          interval: 2000,
+          touch: false
         });
       </script>
 
