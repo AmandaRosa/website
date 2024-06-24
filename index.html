@@ -135,7 +135,16 @@
 
     <div class="w3-row-padding">
       <div class="w3-content w3-padding-large w3-margin-top">
-        <img src="images/lmest1.jpeg" alt="Norway" width="2000" height="1000" class="w3-image">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/lmest1.jpeg" alt="Norway" width="2000" height="1000" class="w3-image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/lmest2.jpeg" alt="Norway" width="2000" height="1000" class="w3-image">
+            </div>
+          </div>
+        </div>
         <div class="w3-container w3-white w3-border-black">
           <p><b>Web-Estoque para Laboratório UFU</b></p>
           <p>Foi desenvolvido um website estático em JavaScript e HTML com banco de dados PostgreSQL para realizar a leitura de arquivos PDF e inserir informações automaticamente no sistema, auxiliando na automação de processos e na eficiência do gerenciamento de dados. Este sistema permite a extração e a inserção de dados relevantes dos PDFs diretamente no banco de dados, eliminando a necessidade de entrada manual de dados, reduzindo erros e economizando tempo. Com isso, a organização pode se concentrar em outras tarefas críticas enquanto garante a precisão e a integridade dos dados armazenados.</p>
@@ -327,14 +336,9 @@
           document.getElementById("myOverlay").style.display = "none";
         }
 
-        let slideIndex = 0;
-
-        function moveSlide(n) {
-            const slides = document.querySelector('.carousel-slide');
-            const totalSlides = slides.children.length;
-            slideIndex = (slideIndex + n + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
+        $('.carousel').carousel({
+          interval: 2000
+        })
       </script>
 
 </body>
