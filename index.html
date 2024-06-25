@@ -87,7 +87,31 @@
     <!-- First Photo Grid-->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom text-bg-light">
-        <img src="images/food.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/food.png" alt="Norway" style="width:100%;margin-bottom:-6px" class="w3-hover-opacity">
+            </div>
+            <div class="carousel-item">
+              <img src="images/food2.png" alt="Norway" style="width:100%;margin-bottom:-6px" class="w3-hover-opacity">
+            </div>
+            <div class="carousel-item">
+              <img src="images/food3.png" alt="Norway" style="width:100%;margin-bottom:-6px" class="w3-hover-opacity">
+            </div>
+            <div class="carousel-item">
+              <img src="images/food4.png" alt="Norway" style="width:100%;margin-bottom:-6px" class="w3-hover-opacity">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- <img src="images/food.png" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
         <div class="w3-container w3-white w3-center">
           <p><b>Rotulação e Detecção de Objetos Personalizada / Personal Object Labeling and Detection</b></p>
           <p>É possível que a partir do Detectron2, reutilizando o treinamento da CNN coco-dataset, realizar o fine-tuning e obter rotulação e detectarção de objetos personalizados.</p>
