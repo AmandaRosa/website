@@ -31,3 +31,7 @@
   .w2-container {
     padding: 20px;
   }
+
+  .w3-container.auto-width {
+    width: auto;
+}
