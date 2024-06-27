@@ -347,7 +347,7 @@
       <hr class="w3-opacity">
       <form id="contactForm">
         <div class="w3-section">
-            <label>Name :C</label>
+            <label>Name :S</label>
             <input class="w3-input w3-border" type="text" name="Name" id="Name" required>
         </div>
         <div class="w3-section">
@@ -401,38 +401,78 @@
             }
         });
 
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+        
+        // SQLite database initialization
+        let db = null;
+
+        // Function to initialize SQLite database
+        function initDatabase() {
+            // Check if the database exists in localStorage
+            let dbData = localStorage.getItem('messages.db');
+            if (dbData) {
+                // If exists, load the database
+                let uInt8Array = new Uint8Array(JSON.parse(dbData));
+                db = new SQL.Database(uInt8Array);
+            } else {
+                // If not exists, create new database
+                db = new SQL.Database();
+                // Create table if not exists
+                db.run(`CREATE TABLE IF NOT EXISTS messages (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    email TEXT NOT NULL,
+                    message TEXT NOT NULL,
+                    submitted_at DATETIME DEFAULT CURRENT_TIMESTAMP
+                )`);
+
+                // Save database to localStorage
+                saveDatabaseToLocalStorage();
+            }
+        }
+
+        // Function to save form data
+        function saveFormData() {
+            // Initialize database if not already initialized
+            if (!db) {
+                initDatabase();
+            }
 
             // Extract form data
-            var formData = {
-                Name: document.getElementById('Name').value,
-                Email: document.getElementById('Email').value,
-                Message: document.getElementById('Message').value
-            };
+            let name = document.getElementById('Name').value;
+            let email = document.getElementById('Email').value;
+            let message = document.getElementById('Message').value;
 
-            // Send form data to PHP script
-            fetch('save_message.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.text())
-            .then(data => {
-                console.log(data); // Log response from PHP script
-                // Optionally display a success message or redirect the user
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Handle errors, e.g., display an error message to the user
-            });
+            // Ensure all fields are filled
+            if (!name || !email || !message) {
+                alert('Please fill out all fields');
+                return;
+            }
 
-            // Optional: Clear form fields after submission
-            // document.getElementById('Name').value = '';
-            // document.getElementById('Email').value = '';
-            // document.getElementById('Message').value = '';
+            // Insert data into SQLite database
+            let stmt = db.prepare(`INSERT INTO messages (name, email, message) VALUES (?, ?, ?)`);
+            stmt.run(name, email, message);
+            stmt.free();
+
+            // Optionally, clear form fields after submission
+            document.getElementById('Name').value = '';
+            document.getElementById('Email').value = '';
+            document.getElementById('Message').value = '';
+
+            // Save database to localStorage
+            saveDatabaseToLocalStorage();
+
+            alert('Message has been saved to SQLite database');
+        }
+
+        // Function to save database to localStorage
+        function saveDatabaseToLocalStorage() {
+            let dbData = JSON.stringify(Array.from(db.export()));
+            localStorage.setItem('messages.db', dbData);
+        }
+
+        // Initialize database when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initDatabase();
         });
       </script>
 
@@ -445,6 +485,7 @@
       <!-- Bootstrap JavaScript -->
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.7.3/sql-wasm.js"></script>
 </body>
 
 </html>
