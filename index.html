@@ -345,21 +345,22 @@
         </div>
       </div>
       <hr class="w3-opacity">
-      <form action="./action_page.php" target="_blank">
+      <form action="./save_message.php" method="post">
         <div class="w3-section">
-          <label>Name</label>
-          <input class="w3-input w3-border" type="text" name="Name" required>
+            <label>Name</label>
+            <input class="w3-input w3-border" type="text" name="Name" required>
         </div>
         <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input w3-border" type="text" name="Email" required>
+            <label>Email</label>
+            <input class="w3-input w3-border" type="email" name="Email" required>
         </div>
         <div class="w3-section">
-          <label>Message</label>
-          <input class="w3-input w3-border" type="text" name="Message" required>
+            <label>Message</label>
+            <textarea class="w3-input w3-border" name="Message" required></textarea>
         </div>
-        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i
-            class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+        <button type="submit" class="w3-button w3-black w3-margin-bottom">
+            <i class="fa fa-paper-plane w3-margin-right"></i>Send Message
+        </button>
       </form>
     </div>
 
