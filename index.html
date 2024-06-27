@@ -345,22 +345,23 @@
         </div>
       </div>
       <hr class="w3-opacity">
-      <form action="save_message.php" method="POST">
+      <form id="contactForm">
         <div class="w3-section">
-            <label>Name :D</label>
-            <input class="w3-input w3-border" type="text" name="Name" required>
+            <label>Name :DD</label>
+            <input class="w3-input w3-border" type="text" name="Name" id="Name" required>
         </div>
         <div class="w3-section">
-            <label>Seu Email</label>
-            <input class="w3-input w3-border" type="email" name="Email" required>
+            <label>Email</label>
+            <input class="w3-input w3-border" type="email" name="Email" id="Email" required>
         </div>
         <div class="w3-section">
             <label>Message</label>
-            <textarea class="w3-input w3-border" name="Message" required></textarea>
+            <textarea class="w3-input w3-border" name="Message" id="Message" required></textarea>
         </div>
         <button type="submit" class="w3-button w3-black w3-margin-bottom">
             <i class="fa fa-paper-plane w3-margin-right"></i>Send Message
         </button>
+    </form>
     </form>
     </div>
 
@@ -399,6 +400,20 @@
                 console.error('Element with ID "myCarousel" not found.');
             }
         });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Extract form data
+            var formData = {
+                Name: document.getElementById('Name').value,
+                Email: document.getElementById('Email').value,
+                Message: document.getElementById('Message').value
+            };
+
+            // Print form data to console
+            console.log(formData);
+          });
       </script>
 
       <!-- jQuery -->
