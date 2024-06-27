@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // SQLite connection
     $dsn = "sqlite:messages.db";
 
-    try {
+    // try {
         $pdo = new PDO($dsn);
         // Set the PDO error mode to exception
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Execute the statement
         $stmt->execute();
         echo "Message has been saved";
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
-    }
+    // } catch (PDOException $e) {
+    //     echo "Error: " . $e->getMessage();
+    // }
 } else {
     // Method not allowed
     http_response_code(405);
