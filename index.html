@@ -347,7 +347,7 @@
       <hr class="w3-opacity">
       <form id="contactForm">
         <div class="w3-section">
-            <label>Name :DD</label>
+            <label>Name :C</label>
             <input class="w3-input w3-border" type="text" name="Name" id="Name" required>
         </div>
         <div class="w3-section">
@@ -411,9 +411,29 @@
                 Message: document.getElementById('Message').value
             };
 
-            // Print form data to console
-            console.log(formData);
-          });
+            // Send form data to PHP script
+            fetch('save_message.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); // Log response from PHP script
+                // Optionally display a success message or redirect the user
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle errors, e.g., display an error message to the user
+            });
+
+            // Optional: Clear form fields after submission
+            // document.getElementById('Name').value = '';
+            // document.getElementById('Email').value = '';
+            // document.getElementById('Message').value = '';
+        });
       </script>
 
       <!-- jQuery -->
