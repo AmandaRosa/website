@@ -345,9 +345,10 @@
         </div>
       </div>
       <hr class="w3-opacity">
-      <form id="contactForm">
+      <form id="contactForm"> 
+        <!-- usar chatwoot -->
         <div class="w3-section">
-            <label>Name :DDD</label>
+            <label>Name :DDDDDDDDD</label>
             <input class="w3-input w3-border" type="text" name="Name" id="Name" required>
         </div>
         <div class="w3-section">
@@ -378,8 +379,6 @@
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.7.3/sql-wasm.js"></script>
 
-
-
       <script>
         // Script to open and close sidebar
         function w3_open() {
@@ -406,23 +405,33 @@
 
         
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault(); 
 
-            // Extract form data
             var formData = {
                 Name: document.getElementById('Name').value,
                 Email: document.getElementById('Email').value,
                 Message: document.getElementById('Message').value
             };
 
-            // Print form data to console
             console.log(formData);
-
-            // You can optionally clear the form fields after logging
-            // document.getElementById('Name').value = '';
-            // document.getElementById('Email').value = '';
-            // document.getElementById('Message').value = '';
         });
+      </script>
+
+      <script>
+        (function(d,t) {
+          var BASE_URL="https://app.chatwoot.com";
+          var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=BASE_URL+"/packs/js/sdk.js";
+          g.defer = true;
+          g.async = true;
+          s.parentNode.insertBefore(g,s);
+          g.onload=function(){
+            window.chatwootSDK.run({
+              websiteToken: 'ijd8JatjsCME83mAVK9e2Txc',
+              baseUrl: BASE_URL
+            })
+          }
+        })(document,"script");
       </script>
 
       <!-- jQuery -->
