@@ -343,27 +343,12 @@
           <p><i class="fa fa-phone w3-xxlarge w3-text-dark-grey"></i></p>
           <p>+55 (34) 98437-5741</p>
         </div>
+        <div class="w3-third w3-blue">
+          <p><i class="bi bi-arrow-down-right-square-fill w3-text-dark-grey"></i></p>
+          <p>Chat</p>
+        </div>
       </div>
       <hr class="w3-opacity">
-      <form id="contactForm"> 
-        <!-- usar chatwoot -->
-        <div class="w3-section">
-            <label>Name :DDDDDDDDD</label>
-            <input class="w3-input w3-border" type="text" name="Name" id="Name" required>
-        </div>
-        <div class="w3-section">
-            <label>Email</label>
-            <input class="w3-input w3-border" type="email" name="Email" id="Email" required>
-        </div>
-        <div class="w3-section">
-            <label>Message</label>
-            <textarea class="w3-input w3-border" name="Message" id="Message" required></textarea>
-        </div>
-        <button type="submit" class="w3-button w3-black w3-margin-bottom">
-            <i class="fa fa-paper-plane w3-margin-right"></i>Send Message
-        </button>
-    </form>
-    </form>
     </div>
 
     <!-- Footer -->
@@ -403,18 +388,6 @@
             }
         });
 
-        
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-            var formData = {
-                Name: document.getElementById('Name').value,
-                Email: document.getElementById('Email').value,
-                Message: document.getElementById('Message').value
-            };
-
-            console.log(formData);
-        });
       </script>
 
       <script>
