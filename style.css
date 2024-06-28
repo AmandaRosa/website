@@ -37,7 +37,7 @@
   height: 30px;
 }
 
-#rcorners3 {
+.rcorners3 {
   border-radius: 15px 50px;
   background: #97bee2;
   padding: 20px;
