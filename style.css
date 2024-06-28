@@ -3,31 +3,36 @@
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-  }
-  
-  .carousel-slide {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  
-  .carousel-image {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .carousel-image.active {
-    opacity: 1;
-  }
-  
-  .w2 {
-    float: left;
-    width: 50%;
-    padding: 0 10px;
-  }
-  .w2-container {
-    padding: 20px;
-  }
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+.w2 {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+.w2-container {
+  padding: 20px;
+}
+
+.bi-arrow-down-right-square-fill {
+  width: 30px;
+  height: 30px;
+}
